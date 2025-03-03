@@ -2,7 +2,7 @@
 pragma solidity ^0.8.23;
 
 import "forge-std/Script.sol";
-import {SimpleEscro} from "../src/SimpleEscrow.sol";
+import {SimpleEscr} from "../src/SimpleEscrow.sol";
 
 contract DeployEscrow is Script {
     function run() external {
