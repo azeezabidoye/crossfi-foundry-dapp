@@ -13,10 +13,11 @@ contract SimpleEscrow {
     }
 
     // Allow buyer to deposit ETH after deployment
+    // ==> Deposit must be greater than zero
     function deposit() external payable {
         require(msg.sender == buyer, "Only buyer can deposit");
         require(isLocked, "Funds already released");
-        require(msg.value > 0, "Deposit must be greater than zero");
+        require(msg.value > 0, "Add more funds");
     }
 
     // Function to release funds to seller
