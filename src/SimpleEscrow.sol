@@ -17,7 +17,7 @@ contract SimpleEscrow {
     function deposit() external payable {
         require(msg.sender == buyer, "Only buyer can deposit");
         require(isLocked, "Funds already released");
-        require(msg.value > 0, "Add more funds");
+        require(msg.value > 0, "Balance must be greater than zero");
     }
 
     // Function to release funds to seller
